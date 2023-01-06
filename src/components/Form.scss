@@ -1,0 +1,42 @@
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 64px;
+}
+
+.resultPanel {
+  font-size: 64px;
+  font-weight: bold;
+  align-self: center;
+
+  color: red;
+  animation-name: color-switch;
+  animation-duration: 4s;
+  transition: color ease 100ms;
+  animation-iteration-count: infinite;
+
+  background-color: lightgray;
+  display: inline-block;
+  border-radius: 12px;
+  text-align: center;
+  padding: 0 12px;
+}
+
+@keyframes color-switch {
+  0% {
+    color: red;
+  }
+  25% {
+    color: yellow;
+  }
+  50% {
+    color: yellowgreen;
+  }
+  75% {
+    color: teal;
+  }
+  100% {
+    color: red;
+  }
+}
