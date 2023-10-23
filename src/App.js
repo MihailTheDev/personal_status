@@ -1,12 +1,20 @@
+import { createContext, useState } from 'react';
 import './App.css';
-import MyForm from './components/Form';
+import AddNewItem from './components/AddNewItem';
 
+
+const INITIAL_LIST_STATE = [];
+export const ListContext = createContext(null);
 
 function App() {
+  const [list, setList] = useState(INITIAL_LIST_STATE)
+
+
   return (
-    <div className='my-form'>
-        <MyForm />
-    </div>
+    <ListContext.Provider
+      value={{ list, setList }}>
+        <AddNewItem />
+    </ListContext.Provider>
   );
 }
 
